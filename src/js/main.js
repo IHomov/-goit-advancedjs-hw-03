@@ -58,6 +58,8 @@ async function onSearchFormSubmit(event) {
     console.error(error);
   } finally {
     hideLoader();
+
+    event.target.reset();
   }
 }
 

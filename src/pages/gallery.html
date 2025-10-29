@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gallery</title>
     <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/gallery.css" />
   </head>
 
   <body>
@@ -24,7 +25,10 @@
           <button class="search-btn" type="submit">Search</button>
         </form>
 
-        <div class="loader hidden"></div>
+        <div class="loader hidden">
+          <span class="loader__spinner"></span>
+          <p class="loader__text">Loading images, please wait...</p>
+        </div>
 
         <ul class="gallery js-gallery"></ul>
       </div>

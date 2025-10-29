@@ -11,9 +11,9 @@ export function renderGallery(images) {
         comments,
         downloads,
       }) => `
-        <li class="gallery-item">
+        <li class="gallery-card">
           <a href="${largeImageURL}">
-            <img src="${webformatURL}" alt="${tags}" loading="lazy" />
+            <img class="gallery-img" src="${webformatURL}" alt="${tags}" loading="lazy" />
           </a>
           <ul class="info">
             <li><b>Likes:</b> ${likes}</li>

@@ -1,15 +1,21 @@
 .container {
-  max-width: 1200px;
+  max-width: var(--container-max);
   padding-left: 16px;
   padding-right: 16px;
   margin-left: auto;
   margin-right: auto;
 }
 
+/* header */
 .page-header {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
   background-color: rgba(1, 1, 1, 1);
+  z-index: 1000;
 }
 
 .menu {
@@ -29,6 +35,11 @@
 
 .menu-link:hover,
 .menu-link:focus {
-  color: #ff6b0a;
-  border-color: #ff6b0a;
+  color: var(--accent-2);
+  border-color: var(--accent-2);
+}
+
+.gallery-section,
+main {
+  padding-top: calc(var(--header-height) + 16px);
 }
