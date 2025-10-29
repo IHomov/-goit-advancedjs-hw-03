@@ -1,5 +1,10 @@
 export function renderGallery(images) {
   const gallery = document.querySelector('.js-gallery');
+
+  if (!gallery) {
+    console.error('Gallery element .js-gallery not found.');
+    return;
+  }
   const markup = images
     .map(
       ({
