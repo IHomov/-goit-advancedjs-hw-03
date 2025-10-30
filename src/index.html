@@ -5,19 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTTP requests</title>
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="../css/gallery.css" />
   </head>
   <body>
     <header class="page-header">
-      <div class="container">
-        <ul class="menu">
-          <li class="menu-item">
-            <a class="menu-link" href="./pages/basic.html">Fetch API</a>
-          </li>
-          <li class="menu-item">
-            <a class="menu-link" href="./pages/gallery.html">Gallery</a>
-          </li>
-        </ul>
-      </div>
+      <section class="gallery-section">
+        <div class="container">
+          <form class="form js-form">
+            <input
+              class="search-input js-search-input"
+              type="text"
+              name="user_query"
+              required
+              placeholder="Search images..."
+            />
+            <button class="search-btn" type="submit">Search</button>
+          </form>
+
+          <div class="loader hidden">
+            <span class="loader__spinner"></span>
+            <p class="loader__text">Loading images, please wait...</p>
+          </div>
+
+          <ul class="gallery js-gallery"></ul>
+        </div>
+      </section>
     </header>
+    <script type="module" src="../main.js" defer></script>
   </body>
 </html>
